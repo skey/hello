@@ -6,6 +6,10 @@ Install:
     $ cd hello
     $ go build hello.go
 
+    or use "go get":
+    $ go get github.com/smallfish/hello
+    $ ls $GOPATH/bin/hello
+
 Usage:
 
     $ ./hello
