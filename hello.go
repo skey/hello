@@ -48,10 +48,10 @@ func work(addr string) {
     ch <- 1
     conn, err := net.DialTimeout("tcp", addr, time.Duration(timeout) * time.Second)
     if err != nil {
-        fmt.Printf("%s\t\033[31mERROR\033[0m\n", addr) // red ERROR
+        fmt.Printf("%s\tERROR\n", addr)
     } else {
         conn.Close()
-        fmt.Printf("%s\t\033[32mOK\033[0m\n", addr) // green OK
+        fmt.Printf("%s\tOK\n", addr)
     }
     wg.Done()
     <-ch
